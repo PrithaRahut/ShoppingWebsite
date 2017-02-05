@@ -1,9 +1,12 @@
 package com.shopping;
 
+@Entity
+
 public class User {
 	String name;
 	String password;
 	String number;
+	@Id
 	String email;
 	
 	public String getName() {

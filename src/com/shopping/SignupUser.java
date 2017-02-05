@@ -25,6 +25,7 @@ public class SignupUser extends HttpServlet{
 			user.setPassword(pwd);
 			user.setNumber(contact);
 		}
+		
 	}
 
 }
