@@ -53,8 +53,8 @@
 		
 		<div class="row">
 			<div class="col-sm-4">
-				<a href="shirts.jsp?category=shirts"><img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
-				<p><a href="shirts.jsp?category=shirts">Shirts</a></p>
+				<a href="shirts.jsp?category=Shirt"><img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+				<p><a href="shirts.jsp?category=Shirt">Shirts</a></p>
 			</div>
 			<div class="col-sm-4">
 				<img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">

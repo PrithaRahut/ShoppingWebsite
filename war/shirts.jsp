@@ -6,10 +6,10 @@
 <%
 	String category=request.getParameter("category");
 	List<Clothing> list= Database.fetchProductbyCategory(category);
-	for(Clothing cloth : list){
+	/*for(Clothing cloth : list){
 		System.out.println(cloth.getName());
 	}
-	/*List<Clothing> list=(List<Clothing>)request.getAttribute("list");*/
+	List<Clothing> list=(List<Clothing>)request.getAttribute("list");*/
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

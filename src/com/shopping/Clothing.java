@@ -7,6 +7,7 @@ public class Clothing {
 	@Id
 	String Code;
 	String name;
+	@Index
 	String category;
 	String gender;
 	String size;
