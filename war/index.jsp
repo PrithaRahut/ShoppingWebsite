@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%
+	String msg=(String)request.getAttribute("msg");
+%>
 <html>
 <head>
 	<title>Home</title>
@@ -13,7 +15,12 @@
   	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
-
+	<%if(msg!=null){ %>
+		<div class="alert alert-success">
+			<button class="close" data-dismiss="alert">&times;</button>
+			<strong><%=msg %></strong>
+		</div>
+	<%} %>
 	<h4 class='elegantshadow'>Elegant Shop</h4>
 	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" >
 		<div class="container-fluid">
@@ -23,7 +30,7 @@
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">MEN<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Clothing</a></li>
+					<li><a href="men-clothing.jsp">Clothing</a></li>
 					<li><a href="#">Shoes</a></li>
 					<li><a href="#">Accessories</a></li>
 					
@@ -65,10 +72,10 @@
 					<div class="text-center"><h3 class="modal-title">Login</h3></div>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+					<form role="form" action="LoginUser" method="post">
 						<div class="form-group">
 							<label for="mail">Email </label>
-							<input type="email" class="form-control" id="mail" style="border-radius: 0px;" name="mail">
+							<input type="email" class="form-control" id="email" style="border-radius: 0px;" name="email">
 						</div>
 						<div class="form-group">
 							<label for="pwd">Password </label>
@@ -91,7 +98,7 @@
 					<div class="text-center"><h3 class="modal-title">Sign Up</h3></div>
 				</div>
 				<div class="modal-body">
-					<form role="form">
+					<form role="form" action="SignupUser" method="post">
 						<div class="form-group">
 							<label for="name"> Name </label>
 							<input type="text" class="form-control" id="name" style="border-radius: 0px;" name="name" required>
@@ -107,11 +114,11 @@
 						</div>
 						<div class="form-group">
 							<label for="pwd">Confirm Password </label>
-							<input type="confirm" class="form-control" id="confirm" style="border-radius: 0px;" name="confirm" required>
+							<input type="password" class="form-control" id="confirm" style="border-radius: 0px;" name="confirm" required>
 						</div>
 						<div class="form-group">
 							<label for="pwd">Contact Number </label>
-							<input type="number" class="form-control" id="cnum" style="border-radius: 0px;" name="cnum">
+							<input type="text" class="form-control" id="cnum" style="border-radius: 0px;" name="cnum">
 						</div>
 						<button type="submit" class="btn btn-success btn-block" style="border-radius: 0px;">Sign up</button>
 					</form>

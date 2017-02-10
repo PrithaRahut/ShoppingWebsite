@@ -1,8 +1,17 @@
 package com.shopping;
 
+
+import java.io.Serializable;
+
+import com.googlecode.objectify.annotation.*;
+
 @Entity
 
-public class User {
+public class User implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2596920418590502093L;
 	String name;
 	String password;
 	String number;
