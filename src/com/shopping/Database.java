@@ -42,12 +42,17 @@ public class Database {
 	public static List<Clothing> fetchProductbyCategory(String category){
 		List<Clothing> list= OfyService.ofy().load()
 				.type(Clothing.class)
-				.filter("category=","Shirt")
+				.filter("category",category)
+				
 				.list();	
 		/*for(Clothing cloth : list){
 			System.out.println(cloth.getName());
 		}*/
 		return list;
+	}
+	public static Clothing fetchProductbyCode(String code){
+		Clothing cloth=OfyService.ofy().load().key(Key.create(Clothing.class, code)).now();
+		return cloth;
 	}
 	
 	

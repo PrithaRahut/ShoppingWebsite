@@ -1,6 +1,8 @@
 package com.shopping;
 
-import com.googlecode.objectify.annotation.*;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 
 @Entity
 public class Clothing {
@@ -14,6 +16,14 @@ public class Clothing {
 	String description;
 	String price;
 	String img;
+	int qty;
+	
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
 	public String getCode() {
 		return Code;
 	}

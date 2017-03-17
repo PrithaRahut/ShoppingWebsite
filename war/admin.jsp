@@ -13,6 +13,9 @@
 	String desc=request.getParameter("desc");
 	String price=request.getParameter("price");
 	String img=request.getParameter("img");
+	int qty=Integer.parseInt(request.getParameter("qty"));
+	//int quantity=Integer.parseInt(qty);
+	//out.println(qty);
 	String msg=null;
 	if(code!=null && name!=null && category!=null && gender!=null && price!=null){
 		Clothing cloth=new Clothing();
@@ -24,6 +27,7 @@
 		cloth.setDescription(desc);
 		cloth.setPrice(price);
 		cloth.setImg(img);
+		cloth.setQty(qty);
 		
 		Database.saveClothProduct(cloth);
 	}
@@ -93,6 +97,9 @@ div {
 		
 		<label for="img">Product Image</label>
 		<input type="text" id="img" name="img">
+		
+		<label for="qty">Product Quantity</label>
+		<input type="number" id="qty" name="qty">
 		
 		<input type="submit" value="Submit">
 		
