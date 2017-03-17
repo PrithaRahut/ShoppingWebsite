@@ -37,9 +37,6 @@
 	<%} %> --%>
 	<div id="first">
 	<%@ include file="header.jsp" %>
-	<script>
-		var isUserLoggedIn=<%=isUserLoggedIn %>
-	</script>
 	<div class="row container-fluid" style="padding-left: 100px;">
 		<div class="col-sm-6 text-center" style="border: 0.5px solid #F4ECEC; ">
 			 <img  class="product" src="<%=cloth.getImg() %>" style="width:400px; height:500px;">
@@ -47,7 +44,7 @@
 		<div class="col-sm-6">
 			<p><%=cloth.getName() %></p>
 			<p>&#8377;<%=cloth.getPrice() %></p>
-			<form onclick="checkLogin()">
+			<form onsubmit="checkLogin()">
 				<p>Select Size:
 					<select id="size">
 						<option value="S">S</option>
@@ -74,60 +71,61 @@
 						<button type="submit" class="button1">Add To Cart</button>
 					</div>
 					<div class="col-sm-4">
-						<button type="submit" class="button2" id="buyNow" >Buy Now</button>
-						<p id="test1"></p>
-						<script type="text/javascript">
-							function checkLogin(){
-								if(userLoggedIn){
-									document.getElementById("test1").innerHTML=5
-									var size=document.getElementById("size").value;
-									var qty=document.getElementById("qty").value;
-									request.setAttribute("cloth",cloth);
-									request.setAttribute("size",size);
-									request.setAttribute("qty",qty);
-									//response.sendRedirect("placeOrder.jsp");
-									RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
-									dispatch.forward(request,response);
-									//document.write("request forwared");
-									document.getElementById("test2").innerHTML=6
-								}else{
-									document.getElementById("loginModal").modal;
-								}
-								
-							}
-						</script>
-						<p id="test2"></p>
+						<input type="submit" value="Buy Now" class="button2" id="buyNow" >
 					</div>
+					<p id="test1"></p>
+					<p id="test2"></p>
 				</div>
-				<div>
-					<div id="loginModal" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<div class="text-center"><h3 class="modal-title">Login</h3></div>
+			</form>
+			<div id="loginModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<div class="text-center"><h3 class="modal-title">Login</h3></div>
+						</div>
+						<div class="modal-body">
+							<form role="form" action="LoginUser" method="post">
+								<div class="form-group">
+									<label for="mail">Email </label>
+									<input type="email" class="form-control" id="email" style="border-radius: 0px;" name="email">
 								</div>
-								<div class="modal-body">
-									<form role="form" action="LoginUser" method="post">
-										<div class="form-group">
-											<label for="mail">Email </label>
-											<input type="email" class="form-control" id="email" style="border-radius: 0px;" name="email">
-										</div>
-										<div class="form-group">
-											<label for="pwd">Password </label>
-											<input type="password" class="form-control" id="pwd" style="border-radius: 0px;" name="pwd">
-										</div>
-										<button type="submit" class="btn btn-success btn-block" style="border-radius: 0px;">Sign in</button>
-									</form>
+								<div class="form-group">
+									<label for="pwd">Password </label>
+									<input type="password" class="form-control" id="pwd" style="border-radius: 0px;" name="pwd">
 								</div>
-							</div>
+								<button type="submit" class="btn btn-success btn-block" style="border-radius: 0px;">Sign in</button>
+							</form>
 						</div>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 	</div>
+	<script>
+		var isUserLoggedIn=<%=isUserLoggedIn %>
+	</script>
+	<script type="text/javascript">
+		function checkLogin(){
+			if(userLoggedIn){
+				document.getElementById("test1").innerHTML=5
+				var size=document.getElementById("size").value;
+				var qty=document.getElementById("qty").value;
+				request.setAttribute("cloth",cloth);
+				request.setAttribute("size",size);
+				request.setAttribute("qty",qty);
+				//response.sendRedirect("placeOrder.jsp");
+				RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
+				dispatch.forward(request,response);
+				//document.write("request forwared");
+				document.getElementById("test2").innerHTML=6
+			}else{
+				document.getElementById("loginModal").modal;
+			}
+			
+		}
+	</script>
 
 </body>
 </html>
