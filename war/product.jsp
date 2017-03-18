@@ -44,9 +44,9 @@
 		<div class="col-sm-6">
 			<p><%=cloth.getName() %></p>
 			<p>&#8377;<%=cloth.getPrice() %></p>
-			<form onsubmit="checkLogin()">
+			<form method="post" >
 				<p>Select Size:
-					<select id="size">
+					<select id="size" name="size">
 						<option value="S">S</option>
 						<option value="M">M</option>
 						<option value="L">L</option>
@@ -57,7 +57,7 @@
 					<button type="submit" class="sbutton1" name="size">L</button> -->
 				</p>
 				<p>Quantity:
-					<select id="qty">
+					<select id="qty" name="qty">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -71,9 +71,9 @@
 						<button type="submit" class="button1">Add To Cart</button>
 					</div>
 					<div class="col-sm-4">
-						<input type="submit" value="Buy Now" class="button2" id="buyNow" >
+						<input type="submit" value="Buy Now" class="button2" id="buyNow" onclick="checkLogin()">
 					</div>
-					<p id="test1"></p>
+					<p id="test1">test1</p>
 					<p id="test2"></p>
 				</div>
 			</form>
@@ -103,26 +103,39 @@
 		</div>
 	</div>
 	</div>
-	<script>
-		var isUserLoggedIn=<%=isUserLoggedIn %>
+	<script type="text/javascript">
+		var isUserLoggedIn=<%=isUserLoggedIn %>;
 	</script>
 	<script type="text/javascript">
 		function checkLogin(){
-			if(userLoggedIn){
-				document.getElementById("test1").innerHTML=5
-				var size=document.getElementById("size").value;
+			console.log("Receached checkLogin function");
+			console.log(isUserLoggedIn);
+			if(isUserLoggedIn){
+				var test=document.getElementById("test1");
+				if(test){
+					test.innerHTML="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+				}
+				 var size=document.getElementById("size").value;
 				var qty=document.getElementById("qty").value;
-				request.setAttribute("cloth",cloth);
+				<%
+				/* request.setAttribute("cloth",cloth);
 				request.setAttribute("size",size);
-				request.setAttribute("qty",qty);
-				//response.sendRedirect("placeOrder.jsp");
-				RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
-				dispatch.forward(request,response);
+				request.setAttribute("qty",qty);*/
+				//response.sendRedirect("placeOrder.jsp"); 
+				//RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
+				//dispatch.forward(request,response);
+				%>
 				//document.write("request forwared");
-				document.getElementById("test2").innerHTML=6
+				//document.getElementById("test2").innerHTML=6; 
 			}else{
-				document.getElementById("loginModal").modal;
-			}
+				console.log("open modal");
+			//	var obj=document.getElementById("loginModal").modal;
+				$(document).ready(function(){
+				    $("#buyNow").click(function(){
+				        $("#loginModal").modal();
+				    });
+				});
+			}  
 			
 		}
 	</script>

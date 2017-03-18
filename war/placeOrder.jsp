@@ -2,11 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ page import="com.shopping.Clothing" %> 
 <%
-	/* String size=request.getParameter("size");
-	int qty=Integer.parseInt(request.getParameter("number")); */
+	/* String size=request.getParameter("size"); */
+	/* int qty=Integer.parseInt(request.getParameter("number")); */ 
 	Clothing cloth=(Clothing)request.getAttribute("cloth");
 	String size=(String)request.getAttribute("size");
-	int qty=Integer.parseInt((String)request.getAttribute("qty"));
+/* 	String str = (String)request.getAttribute("qty"); */
+	/* typeof((String)request.getAttribute("qty"));
+	int qty=Integer.parseInt();  */ 
 	
 	
 %>
@@ -18,17 +20,17 @@
 </head>
 <body>
 	<%=cloth.getName() %><br>
-	<img src="<%=cloth.getImg() %>" style="width:40px; height:50px;"><br>
+	<img src="<%=cloth.getImg() %>" style="width:40px; height:50px;"><br> --%>
 	<%if(size==null){ %>
 		<div class="alert alert-warning">
   			size not found!
 		</div>
 	<%} %>
-	<%if(qty==0){ %>
+	<%-- <%if(qty==0){ %>
 		<div class="alert alert-warning">
   			quantity not found!
 		</div>
-	<%} %>
+	<%} %> --%>
 	
 </body>
 </html>
