@@ -44,7 +44,7 @@
 		<div class="col-sm-6">
 			<p><%=cloth.getName() %></p>
 			<p>&#8377;<%=cloth.getPrice() %></p>
-			<form method="post" >
+			<form method="post" id="orderForm" onsubmit="checkLogin()" action="placeOrder.jsp">
 				<p>Select Size:
 					<select id="size" name="size">
 						<option value="S">S</option>
@@ -65,16 +65,14 @@
 					</select>
 				</p>
 				<p><%=cloth.getDescription() %></p>
-				
+				<p><input type="hidden" name="code" value="<%=cloth.getCode() %>"></p>
 				<div class="row">
 					<div class="col-sm-4">
 						<button type="submit" class="button1">Add To Cart</button>
 					</div>
 					<div class="col-sm-4">
-						<input type="submit" value="Buy Now" class="button2" id="buyNow" onclick="checkLogin()">
+						<input type="submit" value="Buy Now" class="button2" id="buyNow">
 					</div>
-					<p id="test1">test1</p>
-					<p id="test2"></p>
 				</div>
 			</form>
 			<div id="loginModal" class="modal fade" role="dialog">
@@ -111,22 +109,18 @@
 			console.log("Receached checkLogin function");
 			console.log(isUserLoggedIn);
 			if(isUserLoggedIn){
-				var test=document.getElementById("test1");
-				if(test){
-					test.innerHTML="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-				}
-				 var size=document.getElementById("size").value;
+				var size=document.getElementById("size").value;
 				var qty=document.getElementById("qty").value;
-				<%
-				/* request.setAttribute("cloth",cloth);
+				
+				document.getElementById("orderForm").submit();
+			<%-- 	<%
+				request.setAttribute("cloth",cloth);
 				request.setAttribute("size",size);
-				request.setAttribute("qty",qty);*/
-				//response.sendRedirect("placeOrder.jsp"); 
-				//RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
-				//dispatch.forward(request,response);
-				%>
-				//document.write("request forwared");
-				//document.getElementById("test2").innerHTML=6; 
+				request.setAttribute("qty",qty);
+				response.sendRedirect("placeOrder.jsp"); 
+				RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
+				dispatch.forward(request,response);
+				%> --%>
 			}else{
 				console.log("open modal");
 			//	var obj=document.getElementById("loginModal").modal;

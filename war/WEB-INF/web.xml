@@ -39,6 +39,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Category</servlet-name>
 		<url-pattern>/Category</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>OrderServlet</servlet-name>
+		<servlet-class>com.shopping.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/OrderServlet</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app>

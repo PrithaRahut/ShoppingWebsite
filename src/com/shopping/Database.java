@@ -59,4 +59,7 @@ public class Database {
 	public static void saveClothProduct(Clothing cloth){
 		OfyService.ofy().save().entity(cloth);
 	}
+	public static void saveOrder(Order order){
+		OfyService.ofy().save().entity(order);
+	}
 }
