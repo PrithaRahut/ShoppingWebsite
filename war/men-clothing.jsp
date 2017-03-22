@@ -18,28 +18,31 @@
 		
 		<div class="row">
 			<div class="col-sm-4">
-				<a href="shirts.jsp?category=Shirt"><img src="//placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+				<a href="shirts.jsp?category=Shirt"><img src="../resources/images/shirt.jpg" class="img-responsive" style="width:100%; height:240px;" alt="Image" ></a>
 				<p><a href="shirts.jsp?category=Shirt">Shirts</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="//placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/tshirt.jpeg" class="img-responsive" style="width:100%" alt="Image">
 				<p><a href="#">T-Shirts</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="//placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/jeans.jpg" class="img-responsive" style="width:100%" alt="Image">
 				<p><a href="#">Denims</a></p>
 			</div>
 		</div>
 		
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/casualshirt.jpg" class="img-responsive" style="width:100%" alt="Image">
+				<p><a href="#">Casual Shirts</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/shorts.jpg" class="img-responsive" style="width:100%; height:240px" alt="Image">
+				<p><a href="#">Shorts</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/jacket.jpeg" class="img-responsive" style="width:100%" alt="Image">
+				<p><a href="#">Jackets</a></p>
 			</div>
 		</div>
 	</div>

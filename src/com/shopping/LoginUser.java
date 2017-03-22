@@ -18,7 +18,14 @@ public class LoginUser extends HttpServlet {
 		String pwd=request.getParameter("pwd");
 		String msg=null;
 		User user=Database.checkUser(email, pwd);
+		
+		
 		if(user!=null){
+
+			String name=user.getName();
+			String p=user.getPassword();
+			System.out.println(name);
+			System.out.println(p);
 			HttpSession session=request.getSession();  
 			session.setAttribute("user", user);
 			session.setAttribute("email", email);
