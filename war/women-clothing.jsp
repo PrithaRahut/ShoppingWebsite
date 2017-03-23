@@ -14,35 +14,34 @@
 </head>
 </html>
 	<%@include file="header.jsp" %>
-	
 	<div class="container text-center" id="block">
 		
 		<div class="row">
 			<div class="col-sm-4">
-				<a href="clothProducts.jsp?category=Shirt"><img src="../resources/images/shirt.jpg" class="img-responsive" style="width:100%; height:240px;" alt="Image" ></a>
-				<p><a href="clothProducts.jsp?category=Shirt">Shirts</a></p>
+				<a href="clothProducts.jsp?category=kurti"><img src="../resources/images/kurti.jpg" class="img-responsive" style="width:100%; height:232px;" alt="Image" ></a>
+				<p><a href="clothProducts.jsp?category=kurti">Kurtis</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/tshirt.jpeg" class="img-responsive" style="width:100%" alt="Image">
-				<p><a href="clothProducts.jsp?category=TShirt">T-Shirts</a></p>
+				<img src="../resources/images/tops.jpeg" class="img-responsive" style="width:100%" alt="Image">
+				<p><a href="clothProducts.jsp?category=tops">Tops</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/jeans.jpg" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/jeansw.jpg" class="img-responsive" style="width:100%" alt="Image">
 				<p><a href="clothProducts.jsp?category=denim">Denims</a></p>
 			</div>
 		</div>
 		
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="../resources/images/casualshirt.jpg" class="img-responsive" style="width:100%" alt="Image">
-				<p><a href="clothProducts.jsp?category=casualShirt">Casual Shirts</a></p>
+				<img src="../resources/images/dress1.jpg" class="img-responsive" style="width:100%; height:300px" alt="Image">
+				<p><a href="clothProducts.jsp?category=dress">Dresses</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/shorts.jpg" class="img-responsive" style="width:100%; height:240px" alt="Image">
-				<p><a href="clothProducts.jsp?category=shorts">Shorts</a></p>
+				<img src="../resources/images/skirt.jpeg" class="img-responsive" style="width:100%; height:300px" alt="Image">
+				<p><a href="clothProducts.jsp?category=skirt">Skirts</a></p>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/jacket.jpeg" class="img-responsive" style="width:100%" alt="Image">
+				<img src="../resources/images/shrugs.jpg" class="img-responsive" style="width:100%; height:300px" alt="Image">
 				<p><a href="clothProducts.jsp?category=jacket">Jackets</a></p>
 			</div>
 		</div>

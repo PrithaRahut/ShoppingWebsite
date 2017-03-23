@@ -44,7 +44,7 @@
 		<div class="col-sm-6">
 			<p><%=cloth.getName() %></p>
 			<p>&#8377;<%=cloth.getPrice() %></p>
-			<form method="post" id="orderForm" onsubmit="checkLogin()" action="placeOrder.jsp">
+			<form method="post" id="orderForm" onsubmit="return checkLogin()" action="placeOrder.jsp">
 				<p>Select Size:
 					<select id="size" name="size">
 						<option value="S">S</option>
@@ -75,29 +75,7 @@
 					</div>
 				</div>
 			</form>
-			<div id="loginModal" class="modal fade" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<div class="text-center"><h3 class="modal-title">Login</h3></div>
-						</div>
-						<div class="modal-body">
-							<form role="form" action="LoginUser" method="post">
-								<div class="form-group">
-									<label for="mail">Email </label>
-									<input type="email" class="form-control" id="email" style="border-radius: 0px;" name="email">
-								</div>
-								<div class="form-group">
-									<label for="pwd">Password </label>
-									<input type="password" class="form-control" id="pwd" style="border-radius: 0px;" name="pwd">
-								</div>
-								<button type="submit" class="btn btn-success btn-block" style="border-radius: 0px;">Sign in</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+		
 		</div>
 	</div>
 	</div>
@@ -113,22 +91,14 @@
 				var qty=document.getElementById("qty").value;
 				
 				document.getElementById("orderForm").submit();
-			<%-- 	<%
-				request.setAttribute("cloth",cloth);
-				request.setAttribute("size",size);
-				request.setAttribute("qty",qty);
-				response.sendRedirect("placeOrder.jsp"); 
-				RequestDispatcher dispatch=request.getRequestDispatcher("placeOrder.jsp");
-				dispatch.forward(request,response);
-				%> --%>
+				return true;
 			}else{
 				console.log("open modal");
-			//	var obj=document.getElementById("loginModal").modal;
 				$(document).ready(function(){
-				    $("#buyNow").click(function(){
+				    
 				        $("#loginModal").modal();
 				    });
-				});
+				return false;
 			}  
 			
 		}

@@ -24,7 +24,7 @@
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">WOMEN<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Clothing</a></li>
+					<li><a href="women-clothing.jsp">Clothing</a></li>
 					<li><a href="#">Shoes</a></li>
 					<li><a href="#">Accessories</a></li>
 					<li><a href="">Bags</a></li>
@@ -67,6 +67,7 @@
 							<input type="password" class="form-control" id="pwd" style="border-radius: 0px;" name="pwd">
 						</div>
 						<button type="submit" class="btn btn-success btn-block" style="border-radius: 0px;">Sign in</button>
+						<p><a href="#signupModal" data-dismiss="modal" data-toggle="modal">New user? Sign Up</a></p>
 					</form>
 				</div>
 				

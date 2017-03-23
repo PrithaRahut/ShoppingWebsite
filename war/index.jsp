@@ -78,7 +78,7 @@
 		<h3>Shop By Brands</h3 style="font-family: 'Bree Serif', serif;">
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="../resources/images/vero-moda1.jpg" class="img-responsive" style="width:100%" alt="Image">
+				<a><img src="../resources/images/vero-moda1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
 			</div>
 			<div class="col-sm-4">
 				<img src="../resources/images/onlynew.jpg" class="img-responsive" style="width:100%" alt="Image">
