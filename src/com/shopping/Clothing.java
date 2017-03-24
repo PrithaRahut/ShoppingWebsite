@@ -11,6 +11,14 @@ public class Clothing {
 	String name;
 	@Index
 	String category;
+	@Index
+	String brand;
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
 	String gender;
 	String size;
 	String description;

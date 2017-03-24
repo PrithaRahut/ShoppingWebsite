@@ -16,8 +16,8 @@
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">MEN<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="men-clothing.jsp">Clothing</a></li>
-					<li><a href="#">Shoes</a></li>
-					<li><a href="#">Accessories</a></li>
+					<!-- <li><a href="#">Shoes</a></li>
+					<li><a href="#">Accessories</a></li> -->
 					
 				</ul>
 			</li>
@@ -25,15 +25,15 @@
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">WOMEN<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="women-clothing.jsp">Clothing</a></li>
-					<li><a href="#">Shoes</a></li>
+					<!-- <li><a href="#">Shoes</a></li>
 					<li><a href="#">Accessories</a></li>
-					<li><a href="">Bags</a></li>
+					<li><a href="">Bags</a></li> -->
 				</ul>
 			</li>
-			<li><a href="#">NEW</a></li>
+			<!-- <li><a href="#">NEW</a></li> -->
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#search" data-toggle="collapse"><span class="glyphicon glyphicon-search"></span></a></li>
+			<!-- <li><a href="#search" data-toggle="collapse"><span class="glyphicon glyphicon-search"></span></a></li> -->
 				
 			<li><a href="#loginModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			<li><a href="#signupModal" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

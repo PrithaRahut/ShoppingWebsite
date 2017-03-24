@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="col-sm-4 text-center" style="font-family: 'Sansita', sans-serif; font-size:70px; text-shadow:1px 1px #F4ECEC;">
-			<a>New<br> Summer<br> Collection</a>
+			<a href="#summer">New<br> Summer<br> Collection</a>
 			<!-- <img alt="bag2" src="../resources/images/bag4.jpg" style="width:100%;"> -->
 			
 			
@@ -63,34 +63,36 @@
 	</div>
 	</div>
 	<div class="container text-center" id="block">
-		<h3>Latest trends</h3 style="font-family: 'Bree Serif', serif;">
-		<div class="row">
-			<div class="col-sm-4">
-				<img src="../resources/images/summer2.jpg" class="img-responsive" style="width:100%" alt="Image">
-			</div>
-			<div class="col-sm-4">
-				<img src="../resources/images/summer3.jpg" class="img-responsive" style="width:100%" alt="Image">
-			</div>
-			<div class="col-sm-4">
-				<img src="../resources/images/summer4.jpg" class="img-responsive" style="width:100%" alt="Image">
+		<div id="summer">
+			<h3>Latest trends</h3 style="font-family: 'Bree Serif', serif;">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="clothProducts.jsp?category=jacket"><img src="../resources/images/summer2.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+				</div>
+				<div class="col-sm-4">
+					<a href="clothProducts.jsp?category=skirt"><img src="../resources/images/summer3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+				</div>
+				<div class="col-sm-4">
+					<a href="clothProducts.jsp?category=dress"><img src="../resources/images/summer4.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+				</div>
 			</div>
 		</div>
+		
 		<h3>Shop By Brands</h3 style="font-family: 'Bree Serif', serif;">
-		<div class="row">
+		<div class="row" style="padding-bottom:10px;">
 			<div class="col-sm-4">
-				<a><img src="../resources/images/vero-moda1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+				<a href="brandProd.jsp?brand=vero-moda"><img src="../resources/images/vero-moda1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/onlynew.jpg" class="img-responsive" style="width:100%" alt="Image">
+				<a href="brandProd.jsp?brand=only"><img src="../resources/images/onlynew.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
 			</div>
 			<div class="col-sm-4">
-				<img src="../resources/images/biba1.jpg" class="img-responsive" style="width:100%" alt="Image">
+				<a href="brandProd.jsp?brand=biba"><img src="../resources/images/biba1.jpg" class="img-responsive" style="width:100%" alt="Image"></a>	
 			</div>
 		</div>
 	</div>
-	<div>
+	<%@ include file="footer.jsp" %>
 		
-	</div>		
 	
 
 </body>

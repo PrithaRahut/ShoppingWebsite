@@ -12,7 +12,7 @@
   	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
-</html>
+<body>
 	<%@include file="header.jsp" %>
 	
 	<div class="container text-center" id="block">
@@ -28,7 +28,7 @@
 			</div>
 			<div class="col-sm-4">
 				<img src="../resources/images/jeans.jpg" class="img-responsive" style="width:100%" alt="Image">
-				<p><a href="clothProducts.jsp?category=denim">Denims</a></p>
+				<p><a href="clothProducts.jsp?category=denim-men">Denims</a></p>
 			</div>
 		</div>
 		
@@ -43,7 +43,10 @@
 			</div>
 			<div class="col-sm-4">
 				<img src="../resources/images/jacket.jpeg" class="img-responsive" style="width:100%" alt="Image">
-				<p><a href="clothProducts.jsp?category=jacket">Jackets</a></p>
+				<p><a href="clothProducts.jsp?category=jacketm">Jackets</a></p>
 			</div>
 		</div>
 	</div>
+	<%@ include file="footer.jsp" %>
+</body>
+</html>

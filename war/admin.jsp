@@ -8,16 +8,19 @@
 	String code=request.getParameter("code");
 	String name=request.getParameter("pname");
 	String category=request.getParameter("category");
+	String brand=request.getParameter("brand");
 	String gender=request.getParameter("gender");
 	String size=request.getParameter("size");
 	String desc=request.getParameter("desc");
 	String price=request.getParameter("price");
 	String img=request.getParameter("img");
-	int qty=Integer.parseInt(request.getParameter("qty"));
-	//int quantity=Integer.parseInt(qty);
+	String qty=request.getParameter("qty");
+
+	
 	//out.println(qty);
 	String msg=null;
-	if(code!=null && name!=null && category!=null && gender!=null && price!=null){
+	if(code!=null && name!=null && category!=null && gender!=null && price!=null && qty!=null ){
+		int quantity=Integer.parseInt(qty);
 		Clothing cloth=new Clothing();
 		cloth.setCode(code);
 		cloth.setName(name);
@@ -27,7 +30,8 @@
 		cloth.setDescription(desc);
 		cloth.setPrice(price);
 		cloth.setImg(img);
-		cloth.setQty(qty);
+		cloth.setQty(quantity);
+		cloth.setBrand(brand);
 		
 		Database.saveClothProduct(cloth);
 	}
@@ -79,6 +83,9 @@ div {
 		
 		<label for="pname">Product Name</label>
 		<input type="text" id="pname" name="pname">
+		
+		<label for="brand">Product Brand</label>
+		<input type="text" id="brand" name="brand"> 
 		
 		<label for="category">Product Category</label>
 		<input type="text" id="category" name="category">

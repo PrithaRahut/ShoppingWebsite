@@ -50,6 +50,17 @@ public class Database {
 		}*/
 		return list;
 	}
+	public static List<Clothing> fetchProductbyBrand(String brand){
+		List<Clothing> list= OfyService.ofy().load()
+				.type(Clothing.class)
+				.filter("brand",brand)
+				
+				.list();	
+		/*for(Clothing cloth : list){
+			System.out.println(cloth.getName());
+		}*/
+		return list;
+	}
 	public static Clothing fetchProductbyCode(String code){
 		Clothing cloth=OfyService.ofy().load().key(Key.create(Clothing.class, code)).now();
 		return cloth;

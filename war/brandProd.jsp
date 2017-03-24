@@ -4,9 +4,9 @@
 <%@ page import="com.shopping.Clothing" %>
 <%@ page import="com.shopping.Database" %>
 <%
-	String category=request.getParameter("category");
 	
-	List<Clothing> list= Database.fetchProductbyCategory(category);
+	String brand=request.getParameter("brand");
+	List<Clothing> list= Database.fetchProductbyBrand(brand);
 	
 	
 	
@@ -54,6 +54,5 @@
         </div>
       </div>
   </div>
-  <%@ include file="footer.jsp" %>
 </body>
 </html>
